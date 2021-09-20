@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoComponent implements OnInit {
   todoArray = [];
-  title = 'Lista';
+  title = 'Esempio Lista';
 
   constructor() { }
 
