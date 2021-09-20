@@ -1,0 +1,10 @@
+
+
+.rosso:hover{
+    color: red;
+    
+}
+
+.selezionato{
+    text-decoration: line-through;
+}

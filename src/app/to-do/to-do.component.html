@@ -1,0 +1,31 @@
+<h1>{{ title }}</h1>
+<div class="container">
+  <form #todoForm="ngForm" (ngSubmit)="todoSubmit(todoForm.value); todoForm.reset()" >
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <input type="text" placeholder="Aggiungi qualcosa" name="todo" #todo ngModel>
+          <span class="input-group-text" (click)="addTodo(todo.value)">
+          <i class="material-icons">add</i>
+          </span>
+    </div>
+  </div>
+  <div>
+    <p>{{todo.value}}</p>
+  </div>
+
+    <div class="data">
+      <ul class="list-instyled">
+        <li class="input-group-prepend" 
+        *ngFor = "let elemento of todoArray">
+          {{elemento}} 
+              <span class="input-group-text">
+              <i class="material-icons rosso" (click) = "removeItem(elemento)">delete</i>
+              </span>
+        </li>
+      </ul>
+    </div>
+
+  </form>
+
+</div>
+
