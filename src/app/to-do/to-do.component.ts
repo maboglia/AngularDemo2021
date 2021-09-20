@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-to-do', //ci dice come chiamarlo nel HTML
+  selector: 'app-to-do',
   templateUrl: './to-do.component.html',
   styleUrls: ['./to-do.component.css']
 })
@@ -21,7 +21,7 @@ export class ToDoComponent implements OnInit {
   }
 
   todoSubmit(valore: any) {
-     if(valore.todo != '' && valore.todo !== null) {
+     if ( valore.todo !== '' && valore.todo !== null ) {
        this.todoArray.push(valore.todo);
      } else {
        alert('inserisci almeno qualcosa !');
@@ -32,9 +32,9 @@ export class ToDoComponent implements OnInit {
 
     //  this.todoArray.splice(this.todoArray.indexOf(item),1);
 
-      for(let i = 0; i <= this.todoArray.length; i++) {
-        if(item == this.todoArray[i]) {
-          this.todoArray.splice(i,1);
+      for ( let i = 0; i <= this.todoArray.length; i++) {
+        if ( item === this.todoArray[i]) {
+          this.todoArray.splice(i, 1);
         }
       }
   }

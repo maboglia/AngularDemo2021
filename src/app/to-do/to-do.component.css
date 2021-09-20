@@ -1,10 +1,7 @@
-
-
-.rosso:hover{
-    color: red;
-    
+.rosso:hover {
+    color: rgb(255, 81, 0);
 }
 
-.selezionato{
+.selezionato {
     text-decoration: line-through;
 }
